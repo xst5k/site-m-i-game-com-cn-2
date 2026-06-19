@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xst5k.github.io/site-m-i-game-com-cn-2/sitemap.xml
