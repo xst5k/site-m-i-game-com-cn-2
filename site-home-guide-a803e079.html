@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>雷速 · 页面说明</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f6fbfa;
+      color: #1e2b2c;
+      line-height: 1.6;
+      padding: 1.5rem 1rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrapper {
+      max-width: 840px;
+      width: 100%;
+    }
+
+    /* 开场 · 短句 */
+    .opener {
+      margin-bottom: 2.4rem;
+      text-align: left;
+    }
+    .opener h1 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #1b4e4f;
+      margin-bottom: 0.2rem;
+    }
+    .opener .sub {
+      font-size: 1rem;
+      color: #427a7a;
+      border-left: 3px solid #3b9b9b;
+      padding-left: 0.8rem;
+      margin-top: 0.1rem;
+    }
+
+    /* 承接段落 */
+    .context-card {
+      background: #ffffff;
+      padding: 1.6rem 1.8rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0, 40, 40, 0.03), 0 1px 3px rgba(0, 30, 30, 0.06);
+      margin-bottom: 2.4rem;
+      border: 1px solid #d6ecea;
+    }
+    .context-card p {
+      margin-bottom: 1.2rem;
+    }
+    .context-card p:last-child {
+      margin-bottom: 0;
+    }
+    .context-card a {
+      color: #1f7a7a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #9cc7c5;
+      transition: color 0.15s ease;
+    }
+    .context-card a:hover {
+      color: #0b4f4f;
+      text-decoration-color: #0b4f4f;
+    }
+
+    /* 特点网格卡片 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.6rem;
+    }
+    .feature-item {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.2rem 1rem 1rem;
+      border: 1px solid #d6ecea;
+      box-shadow: 0 1px 4px rgba(0, 50, 50, 0.02);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .feature-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(48, 110, 110, 0.06);
+    }
+    .feature-item .icon {
+      display: inline-block;
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+      color: #3b9b9b;
+    }
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1d5252;
+      margin: 0.2rem 0 0.4rem;
+    }
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #3e5f5f;
+      line-height: 1.4;
+    }
+
+    /* 温和结尾 */
+    .closing-note {
+      background: #e2f3f2;
+      padding: 1.6rem 1.8rem;
+      border-radius: 24px;
+      margin-bottom: 2.2rem;
+      border: 1px solid #c2e0de;
+    }
+    .closing-note p {
+      margin-bottom: 0.75rem;
+      color: #1d4a4a;
+    }
+    .closing-note p:last-child {
+      margin-bottom: 0;
+    }
+    .closing-note a {
+      color: #1f7a7a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #8ebfbd;
+    }
+    .closing-note a:hover {
+      color: #094747;
+    }
+
+    /* 提示 / 说明小条 */
+    .tip-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.4rem 1rem;
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      padding: 0.9rem 1.4rem;
+      border-radius: 40px;
+      border: 1px solid #cde5e3;
+      font-size: 0.92rem;
+      color: #2b5b5b;
+      margin-bottom: 2rem;
+    }
+    .tip-line span {
+      white-space: nowrap;
+    }
+    .tip-line .label {
+      font-weight: 500;
+      color: #1b6b6b;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 480px) {
+      body { padding: 1rem 0.8rem 2.5rem; }
+      .opener h1 { font-size: 1.6rem; }
+      .context-card { padding: 1.2rem 1.2rem; }
+      .feature-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+      .closing-note { padding: 1.2rem 1.2rem; }
+      .tip-line { font-size: 0.85rem; padding: 0.7rem 1rem; }
+    }
+
+    /* 辅仁微调 */
+    .fine-print {
+      font-size: 0.8rem;
+      color: #6f8f8f;
+      text-align: center;
+      margin-top: 1.2rem;
+      border-top: 1px solid #d1e6e4;
+      padding-top: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 开场短句 -->
+  <div class="opener">
+    <h1>一个稳定的入口</h1>
+    <div class="sub">页面说明 · 内容索引</div>
+  </div>
+
+  <!-- 承接段落：从稳定入口和页面说明的角度展开 -->
+  <div class="context-card">
+    <p>
+      无论你之前通过哪种方式找到这里，这个页面都保持相同的结构。<a href="https://site-home-leisu.com">雷速</a>是所有内容的起点，也是每次访问时最先看到的部分。它不复杂，也没有多余的修饰，只是把基本信息按照固定的次序排列好。
+    </p>
+    <p>
+      这种安排意味着你可以花更少的时间去理解布局，而把注意力放在想了解的事情上。下面列出的几个特点，可以帮助你更快地熟悉这个页面提供的核心信息。
+    </p>
+  </div>
+
+  <!-- 特点列表（网格卡片） -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="icon">▩</div>
+      <h3>简洁索引</h3>
+      <p>每个部分都承担明确的说明角色，不堆叠无关内容。</p>
+    </div>
+    <div class="feature-item">
+      <div class="icon">▦</div>
+      <h3>稳定结构</h3>
+      <p>头部、特点、结尾的顺序一直保留，适合快速浏览。</p>
+    </div>
+    <div class="feature-item">
+      <div class="icon">▣</div>
+      <h3>蓝绿基调</h3>
+      <p>色彩取自自然水色，阅读时眼睛不易疲劳。</p>
+    </div>
+    <div class="feature-item">
+      <div class="icon">◈</div>
+      <h3>自适应网格</h3>
+      <p>卡片在手机与桌面都保持整洁间距，无需缩放。</p>
+    </div>
+  </div>
+
+  <!-- 温和结尾 + FAQ 摘要 / 场景提示 -->
+  <div class="closing-note">
+    <p>
+      <strong>常见使用场景</strong> · 当你需要确认当前页面的用途，或想了解<a href="https://site-home-leisu.com">雷速</a>提供了哪些基础说明时，可以直接浏览上方几个卡片。它们覆盖了页面最常用的几个特点。
+    </p>
+    <p>
+      如果你在寻找更详细的介绍或操作指引，也可以从页面顶部重新开始。到这里，你已经掌握了这份说明的大致轮廓。
+    </p>
+    <p style="margin-top: 0.8rem; font-style: italic; color: #2f6a6a;">
+      —— 一份简洁的页面说明，不需要更多注释。
+    </p>
+  </div>
+
+  <!-- 提示条（额外信息，丰富节奏） -->
+  <div class="tip-line">
+    <span class="label">📄 页面说明</span>
+    <span>·</span>
+    <span>本页结构稳定，适合作为书签或初始导航</span>
+    <span>·</span>
+    <span>上次调整：内容次序未变</span>
+  </div>
+
+  <!-- 页脚小字（仅示意） -->
+  <div class="fine-print">
+    页面内容整理于常见说明方式 · 指向首页的链接始终有效
+  </div>
+
+</div>
+</body>
+</html>
