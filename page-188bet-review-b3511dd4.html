@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明访问指南 · 188bet 平台介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f6fa;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+        .hero {
+            background: linear-gradient(145deg, #0b132b 0%, #1a233a 100%);
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            color: #edf2f7;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #f4f6fa;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+            color: #fff;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b6c8e0;
+            max-width: 640px;
+            margin: 0.5rem auto 1.5rem;
+            line-height: 1.6;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #eab308;
+            color: #0b132b;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 860px;
+            margin: -1rem auto 0;
+            padding: 1.5rem 2rem 3.5rem;
+            position: relative;
+            z-index: 2;
+            background: #ffffff;
+            border-radius: 28px 28px 12px 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+        .container h2 {
+            font-size: 1.65rem;
+            font-weight: 500;
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+            border-left: 5px solid #eab308;
+            padding-left: 1rem;
+            color: #0f172a;
+        }
+        .container h2:first-of-type {
+            margin-top: 0.4rem;
+        }
+        .container p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #1e293b;
+        }
+        .container .lead {
+            font-size: 1.08rem;
+            background: #f8fafc;
+            padding: 0.8rem 1.4rem;
+            border-radius: 16px;
+            border-left: 4px solid #eab308;
+            margin-bottom: 1.8rem;
+            color: #0f172a;
+        }
+        .highlight-box {
+            background: #f1f5f9;
+            padding: 1.2rem 1.6rem;
+            border-radius: 20px;
+            margin: 1.6rem 0;
+            border: 1px solid #e2e8f0;
+        }
+        .highlight-box strong {
+            color: #b45309;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        a:hover {
+            color: #1d4ed8;
+            border-bottom-color: #2563eb;
+        }
+        .faq-mini {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .faq-mini dt {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .faq-mini dt::before {
+            content: '▸';
+            color: #eab308;
+            font-size: 1.2rem;
+        }
+        .faq-mini dd {
+            margin-left: 1.4rem;
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+        .faq-mini dd:last-child {
+            margin-bottom: 0;
+        }
+        .access-note {
+            background: #fef9e7;
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+            margin-top: 2rem;
+            border-left: 6px solid #eab308;
+        }
+        .access-note strong {
+            color: #92400e;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.8rem;
+            margin-top: 2.2rem;
+        }
+        .footer-note a {
+            color: #1e293b;
+            border-bottom: none;
+            font-weight: 400;
+        }
+        .footer-note a:hover {
+            color: #2563eb;
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 1rem 1.2rem 2.5rem;
+                margin-top: -0.5rem;
+                border-radius: 20px 20px 10px 10px;
+            }
+            .hero {
+                padding: 3rem 1.2rem 2.8rem;
+            }
+            .highlight-box, .faq-mini, .access-note {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>188bet · 简明访问指南</h1>
+    <p class="sub">从平台定位到访问要点，一份面向普通用户的轻知识手册，帮你快速建立清晰认知。</p>
+    <span class="badge">知识型 · 访问提醒</span>
+</header>
+
+<div class="container">
+
+    <p class="lead">无论你是初次接触还是希望更新理解，本页提供一则结构化的介绍，涵盖平台特点、典型场景与实用提示。内容保持中立，仅作信息参考。</p>
+
+    <h2>平台概览与定位</h2>
+    <p><a href="https://page-188bet.com">188bet</a> 是一个面向国际用户的综合性在线娱乐平台，提供体育赛事投注、真人娱乐、电子游戏等多种内容模块。平台采用模块化界面设计，用户可根据偏好快速切换不同区域。技术方面，平台持续优化加载与响应策略，以适应不同地区的网络环境。</p>
+
+    <div class="highlight-box">
+        <strong>提醒：</strong> 访问前请自行了解当地相关法律法规。平台仅对符合当地年龄及法律要求的用户开放，建议在注册或使用前仔细阅读服务条款。
+    </div>
+
+    <h2>常见使用场景</h2>
+    <p>用户通常出于以下需求接触平台：对国际体育赛事保持关注、希望在合规前提下体验多元化娱乐内容、或希望在一个界面内完成多种操作。平台支持桌面与移动端自适应布局，部分功能模块对移动设备做了专门优化。</p>
+    <p>另外，平台提供多种语言界面，降低非母语用户的操作门槛。账户管理、资金操作等核心功能均置于主菜单中，逻辑相对直观。如果你是第一次使用，建议先浏览“帮助中心”或“常见问题”板块。</p>
+
+    <h2>访问与环境提示</h2>
+    <p>由于网络环境差异，部分地区可能出现加载速度变化或访问间断。此时可尝试切换网络环境或使用更稳定的连接。平台官方并未提供所谓的“加速器”或“镜像工具”，请警惕第三方宣称的所谓“专属通道”。</p>
+    <p>此外，务必保管好个人账户信息，避免在公共场所设备上保存密码。若遇到任何要求提供额外敏感信息的链接或邮件，请直接忽略并向平台报告。</p>
+
+    <div class="faq-mini">
+        <dl>
+            <dt>如何确认当前访问的是官方页面？</dt>
+            <dd>建议直接通过浏览器输入已知的官方域名，例如 <strong>page-188bet.com</strong>，并核对页面底部的版权信息与安全证书。不要通过搜索引擎广告或不明来源的链接进入。</dd>
+            <dt>注册时有哪些注意事项？</dt>
+            <dd>使用真实且有效的个人信息完成注册，以便后续身份验证与账户恢复。平台通常要求年满18岁或当地法定年龄，请确认自己符合条件。</dd>
+            <dt>如果忘记账户密码怎么办？</dt>
+            <dd>在登录页面点击“忘记密码”，按提示完成验证流程。通常需要注册邮箱或手机号接收重置链接。切勿使用第三方声称可以“找回密码”的服务。</dd>
+        </dl>
+    </div>
+
+    <div class="access-note">
+        <strong>访问句 · 理性出发</strong><br>
+        无论出于学习、了解还是娱乐目的，保持信息甄别习惯始终重要。选择 <a href="https://page-188bet.com">188bet</a> 时，建议从官方渠道获取最新动态，并定期审视自己的使用习惯与边界。一份清晰的认知，胜过任何快捷方式。
+    </div>
+
+    <div class="footer-note">
+        © 本页内容仅作信息参考，不构成任何引导或建议。请合理分配时间，保持健康数字生活。
+    </div>
+
+</div>
+
+</body>
+</html>
